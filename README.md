@@ -116,7 +116,7 @@ Timeline 2.0 is rebuilt on a much lighter base (Tauri and Rust instead of Electr
   </tr>
 </table>
 
-- **Plays what you have:** MP4, MKV, WebM, AVI and MOV, plus MP3, WAV, OGG, AAC, M4A, FLAC, Opus and WEBA. Broken files and AVIs are repaired or converted on the fly (some very old AVI codecs aren't supported yet; more formats will come with updates).
+- **Plays what you have:** MP4, MKV, WebM, AVI, MOV, M4V and WMV, recordings from OBS and camcorders (TS, M2TS, MTS) and DVD video (VOB, MPG), plus MP3, WAV, OGG, AAC, M4A, FLAC, Opus and WEBA. Files the player can't show directly (old codecs like DivX / Xvid or MPEG-2, broken recordings) are repackaged or converted on the fly, **Dolby Digital (AC-3)** sound included, which Windows 11 no longer decodes. When a file really can't play (a codec Windows has no decoder for), Timeline tells you why.
 - **Seek previews:** 20 pictures per video, made in the background (they can be switched off).
 - **Frame-accurate trimming** with a Save trim panel and a progress bar. The original file is never changed.
 - **Playback speed** from 0.1x to 16x, **frame stepping**, jump to 10%…100% with the number keys, fullscreen, and **picture-in-picture** in a small window that stays on top.
@@ -292,6 +292,12 @@ Another program (often a GPU overlay, which can use <kbd>Alt</kbd>+<kbd>F10</kbd
 <summary><b>Why does the benchmark ask for administrator rights?</b></summary>
 <br/>
 To read your game's exact frame times, Timeline uses Windows' own frame tracing (the same as PresentMon), which Windows only allows with administrator rights. It asks once when a benchmark starts; nothing else in Timeline ever needs them.
+</details>
+
+<details>
+<summary><b>A video plays without sound or says it can't be played.</b></summary>
+<br/>
+Timeline plays most video and sound formats, converting old ones on the fly (shown in the Passive jobs bar at the bottom). A few formats have no decoder in Windows, like <b>DTS</b> and <b>Dolby Digital Plus</b> sound or very old codecs such as Cinepak: Timeline then says which one, so you know it isn't your file that's broken.
 </details>
 
 <details>
