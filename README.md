@@ -4,11 +4,11 @@
 
 # Timeline
 
-**A fast, free media player and screen recorder for Windows.**<br/>
-Seek previews, frame-accurate trimming, one-key clips, and watching together in sync.<br/>
+**A fast, free media player, screen recorder and streaming app for Windows.**<br/>
+Seek previews, frame-accurate trimming, one-key clips, going live on Twitch, YouTube and Kick, and watching together in sync.<br/>
 <sub>New in 2.0: rebuilt to be tiny (a 5 MB download) and light, using 2-3x less memory.</sub>
 
-[![Latest release](https://img.shields.io/github/v/release/LAAGU/Timeline-Video-Player?label=latest&color=0099ff&style=flat-square)](../../releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/LAAGU/Timeline-For-Windows?label=latest&color=0099ff&style=flat-square)](../../releases/latest)
 [![Installer downloads](https://img.shields.io/endpoint?url=https%3A%2F%2Ftimeline.softwaretrinkets.com%2Fapi%2Fbadge%2Fdownloads&style=flat-square)](../../releases)
 ![Windows 10 | 11](https://img.shields.io/badge/Windows-10%20%7C%2011-2b2b33?style=flat-square)
 ![Free](https://img.shields.io/badge/price-free-30d158?style=flat-square)
@@ -24,7 +24,7 @@ Seek previews, frame-accurate trimming, one-key clips, and watching together in 
   <img src="assets/screenshots/player-dark.webp" alt="Timeline playing a video, with the file list on the right" width="100%" />
 </picture>
 
-[Lighter in 2.0](#-lighter-in-20) · [Player](#-player) · [Recorder](#-recorder) · [Watch together](#-watch-together) · [Shortcuts](#-keyboard-shortcuts) · [Privacy](#-privacy) · [FAQ](#-faq)
+[Lighter in 2.0](#-lighter-in-20) · [Player](#-player) · [Recorder](#-recorder) · [Streaming](#-streaming) · [Watch together](#-watch-together) · [Shortcuts](#-keyboard-shortcuts) · [Privacy](#-privacy) · [FAQ](#-faq)
 
 </div>
 
@@ -38,6 +38,7 @@ Seek previews, frame-accurate trimming, one-key clips, and watching together in 
 | 🔴 **GPU screen recording**<br/><sub>NVIDIA, AMD and Intel encoders: H.264, H.265 and AV1.</sub> | 👥 **Watch together**<br/><sub>A 6-digit code, synced playback and chat. No upload.</sub> | 🪶 **Tiny and light**<br/><sub>A 5 MB download. 2-3x less memory than 1.x.</sub> |
 | 📊 **Best settings for my PC**<br/><sub>Recorder settings picked for your graphics card and screen.</sub> | 🎮 **Game benchmark**<br/><sub>Your game's exact FPS, what Timeline costs it, and why frames drop.</sub> | 🆓 **Free**<br/><sub>No account, no ads, nothing else to install.</sub> |
 | 📺 **Streams and free TV**<br/><sub>Any video or stream link, or thousands of free channels.</sub> | 💬 **Captions online**<br/><sub>Find captions for the video you're watching. No account needed.</sub> | 🎨 **Caption style**<br/><sub>Your colour, size, font, outline and background.</sub> |
+| 📡 **Go live**<br/><sub>Stream to Twitch, YouTube, Kick or any RTMP server, on your graphics card.</sub> | 🔀 **Multistream**<br/><sub>One stream to several services at once, encoded only once.</sub> | 🔑 **Sign in, no keys**<br/><sub>Sign in with Twitch or YouTube and set your title right in Timeline.</sub> |
 
 ---
 
@@ -139,7 +140,7 @@ Timeline 2.0 is rebuilt on a much lighter base (Tauri and Rust instead of Electr
 
 <table>
   <tr>
-    <td width="50%"><img src="assets/screenshots/recorder.webp" alt="The Recorder tab with its video settings" /><br/><sub><b>Your settings:</b> display or one window, resolution, fps, encoder, bitrate.</sub></td>
+    <td width="50%"><img src="assets/screenshots/recorder.webp" alt="The Recorder tab with Go live beside Record and the Streaming settings button above its video settings" /><br/><sub><b>Your settings:</b> display or one window, resolution, fps, encoder, bitrate. <b>Go live</b> sits beside Record.</sub></td>
     <td width="50%"><img src="assets/screenshots/recorder-clips.webp" alt="The Clips tab with clip lengths from 15 seconds to 5 minutes" /><br/><sub><b>Clipping:</b> choose how far back a clip goes.</sub></td>
   </tr>
 </table>
@@ -179,6 +180,33 @@ Timeline 2.0 is rebuilt on a much lighter base (Tauri and Rust instead of Electr
 
 ---
 
+## 📡 Streaming
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/screenshots/streaming-account.webp" alt="Settings, Streaming page, Account tab: service, server, stream key and Sign in with Twitch" /><br/><sub><b>Where to stream:</b> pick a service and sign in, or paste a stream key.</sub></td>
+    <td width="50%"><img src="assets/screenshots/streaming-multistream.webp" alt="The Multistream tab: YouTube and Kick added next to Twitch, with the upload they need" /><br/><sub><b>Multistream:</b> add more services; the upload they need is shown.</sub></td>
+  </tr>
+</table>
+
+- **Go live** on **Twitch**, **YouTube**, **Kick** or any **RTMP / RTMPS** server with one click beside Record, or <kbd>Alt</kbd>+<kbd>F8</kbd> from anywhere. The stream is encoded on your graphics card like your recordings; when its settings match your recording's, one encode feeds both.
+- **Sign in with Twitch or YouTube** instead of copying a stream key. Set your Twitch title, category, tags and language, or your YouTube broadcast's title, description, privacy and latency, in Timeline: they're sent when you go live. Twitch has a **test stream** that viewers don't see; on YouTube, pick *Private* to try it out.
+- **Multistream:** send the same stream to several services at once (for example Twitch, YouTube and Kick). Your PC encodes it once; each service gets its own connection, so if one has trouble, the others keep going.
+- **Settings that fit each platform:** bitrate, keyframes, size and frame rate follow each platform's published limits (the strictest one when you multistream), with a plain warning before anything would get your stream cut. *I know what I'm doing* unlocks them.
+- **Change what you capture while live:** pick another window or display and the stream switches at once, without restarting. Sound, microphone and volumes change live too.
+- **Live status** beside Record: time live, upload speed, dropped frames and a health dot, per service when you multistream. A lost connection reconnects by itself.
+- Everything lives on its own **Streaming** page in Settings, one click from the top of the recorder's **Video** tab.
+
+<details>
+<summary><b>See the quality settings and a live stream</b></summary>
+<br/>
+<img src="assets/screenshots/streaming-quality.webp" alt="The Quality tab: size, frame rate, bitrate and keyframes, locked to Twitch's limits" />
+<br/><br/>
+<img src="assets/screenshots/streaming-live.webp" alt="The recorder while live: the LIVE chip with time, 2 services, upload speed and dropped frames" />
+</details>
+
+---
+
 ## 👥 Watch together
 
 <table>
@@ -200,7 +228,7 @@ Timeline 2.0 is rebuilt on a much lighter base (Tauri and Rust instead of Electr
 
 <img src="assets/screenshots/settings.webp" alt="The Settings window on its General page" />
 
-One window with **General, Player, Recorder, Cache, Logs** and **About**: theme, start-up and closing behaviour, notifications, the default player, every hotkey, a **cache manager** that shows what Timeline stores and clears it, readable logs for bug reports (and a button to send a problem report to the developer), and the release notes.
+One window with **General, Player, Recorder, Streaming, Cache, Logs** and **About**: theme, start-up and closing behaviour, notifications, the default player, every hotkey, a **cache manager** that shows what Timeline stores and clears it, readable logs for bug reports (and a button to send a problem report to the developer), and the release notes.
 
 ---
 
@@ -214,7 +242,7 @@ Every shortcut can be changed in Settings. Recorder shortcuts can also be a **si
 | <kbd>←</kbd> <kbd>→</kbd> | Skip 10 s | <kbd>Alt</kbd>+<kbd>F12</kbd> | Stop recording |
 | <kbd>Ctrl</kbd>+<kbd>←</kbd> <kbd>→</kbd> | One frame back / forward | <kbd>Alt</kbd>+<kbd>F10</kbd> | Save a clip |
 | <kbd>↑</kbd> <kbd>↓</kbd> | Volume | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> | Start / stop a benchmark |
-| <kbd>1</kbd> … <kbd>9</kbd>, <kbd>0</kbd> | Jump to 10% … 100% | | |
+| <kbd>1</kbd> … <kbd>9</kbd>, <kbd>0</kbd> | Jump to 10% … 100% | <kbd>Alt</kbd>+<kbd>F8</kbd> | Go live / end the stream |
 | <kbd>M</kbd> · <kbd>F</kbd> · <kbd>Shift</kbd>+<kbd>P</kbd> | Mute · Fullscreen · Picture-in-picture | | |
 | <kbd>D</kbd> · <kbd>A</kbd> | Next · Previous file | | |
 | <kbd>Ctrl</kbd>+<kbd>S</kbd> | Player settings | | |
@@ -245,6 +273,8 @@ Timeline can share **anonymous usage data** to find bugs and decide what to impr
 | Grouped error messages, with file paths removed | |
 
 **Captions online:** a search sends only the video's file name and a fingerprint to OpenSubtitles, never the video, and only when you press *Search*. **Streams** play straight from the channel's own server.
+
+**Streaming:** stream keys and Twitch / YouTube sign-ins are kept encrypted on your PC for your Windows account, and never written to logs or problem reports. Timeline talks to Twitch and YouTube only for what you ask (your key, title and broadcast).
 
 **Problem reports and benchmarks** are sent to the developer only when you press *Send* (Settings → Logs, Recorder → Performance), with file names, paths and e-mail addresses removed first.
 
@@ -298,6 +328,18 @@ To read your game's exact frame times, Timeline uses Windows' own frame tracing 
 <summary><b>A video plays without sound or says it can't be played.</b></summary>
 <br/>
 Timeline plays most video and sound formats, converting old ones on the fly (shown in the Passive jobs bar at the bottom). A few formats have no decoder in Windows, like <b>DTS</b> and <b>Dolby Digital Plus</b> sound or very old codecs such as Cinepak: Timeline then says which one, so you know it isn't your file that's broken.
+</details>
+
+<details>
+<summary><b>Google says "Google hasn't verified this app" when I sign in with YouTube.</b></summary>
+<br/>
+That's expected for now: Timeline's YouTube sign-in hasn't been through Google's review yet. Choose <b>Advanced</b>, then continue to Timeline. You can also paste your stream key from YouTube Studio instead of signing in.
+</details>
+
+<details>
+<summary><b>How much upload do I need to multistream?</b></summary>
+<br/>
+Each service gets the whole stream, so two services at 6,000 kbps need about 12 Mbps of upload. The Multistream tab shows the total; lower the bitrate on the Quality tab if your upload is smaller.
 </details>
 
 <details>
