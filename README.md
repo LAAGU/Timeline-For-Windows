@@ -126,7 +126,8 @@ Timeline 2.0 is rebuilt on a much lighter base (Tauri and Rust instead of Electr
 - **Compress** a video to a target size with your graphics card's encoder (NVIDIA, AMD, Intel) or Windows' own, and **upload** it to Gofile to get a link.
 - **Ambient mode:** a soft glow of the video's colours behind the player.
 - **File list** with thumbnails, filters and sorting. Open files from Explorer, or make Timeline your default player.
-- **Themes:** Dark, Light, or follow Windows.
+- **Themes:** Dark, Light, or follow Windows, your own accent colour and interface size.
+- **Glass controls** (optional): the player's controls on liquid glass made from the video itself, with gently moving mist if you like. The picture is never changed, and the glass only draws while the controls show.
 
 <details>
 <summary><b>See the player settings</b></summary>
@@ -240,7 +241,7 @@ Every shortcut can be changed in Settings. Recorder shortcuts can also be a **si
 |---|---|---|---|
 | <kbd>Space</kbd> | Play / pause | <kbd>Alt</kbd>+<kbd>F11</kbd> | Start recording |
 | <kbd>←</kbd> <kbd>→</kbd> | Skip 10 s | <kbd>Alt</kbd>+<kbd>F12</kbd> | Stop recording |
-| <kbd>Ctrl</kbd>+<kbd>←</kbd> <kbd>→</kbd> | One frame back / forward | <kbd>Alt</kbd>+<kbd>F10</kbd> | Save a clip |
+| <kbd>Ctrl</kbd>+<kbd>←</kbd> <kbd>→</kbd> | One frame back / forward (<kbd>Shift</kbd>: two) | <kbd>Alt</kbd>+<kbd>F10</kbd> | Save a clip |
 | <kbd>↑</kbd> <kbd>↓</kbd> | Volume | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> | Start / stop a benchmark |
 | <kbd>1</kbd> … <kbd>9</kbd>, <kbd>0</kbd> | Jump to 10% … 100% | <kbd>Alt</kbd>+<kbd>F8</kbd> | Go live / end the stream |
 | <kbd>M</kbd> · <kbd>F</kbd> · <kbd>Shift</kbd>+<kbd>P</kbd> | Mute · Fullscreen · Picture-in-picture | | |
